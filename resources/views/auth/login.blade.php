@@ -11,7 +11,9 @@
                 {{ session('status') }}
             </div>
         @endif
+    {{-- <link href="{{ asset('public/build/css/login-register-lock.css') }}" rel="stylesheet"> --}}
 
+        {{-- <div class="login-register" style="{{ asset('public/images/background/fondo-login-1024x427.jpg') }}"> --}}
         <form method="POST" action="{{ route('login') }}">
             @csrf
 

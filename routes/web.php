@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
 Route::get('/', function () {
+    return view('auth.login2');
+});
+
+Route::get('/home', function () {
     return view('pages.home');
 });
 Route::get('/table', function () {
@@ -30,6 +33,6 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard.home');
     })->name('dashboard');
 });
